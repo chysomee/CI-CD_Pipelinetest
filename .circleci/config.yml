@@ -62,3 +62,4 @@ workflows:
     jobs:
       - say-hello
       - create_infrastructure
+      - configure_infrastructure
