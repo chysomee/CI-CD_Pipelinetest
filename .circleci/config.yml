@@ -40,7 +40,7 @@ jobs:
       - persist_to_workspace:
           root: /tmp/workspace
           paths:
-            - ~/CI-CD_Pipelinetest/.circleci/create_infrastructure/*    
+            - CI-CD_Pipelinetest/.circleci/create_infrastructure/*    
 
   configure_infrastructure:
     docker:
