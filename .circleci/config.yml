@@ -44,7 +44,7 @@ jobs:
             yum install -y tar gzip
 
       - persist_to_workspace:
-          root: /tmp/workspace
+          root: ~/.circleci
           paths:
             - CI-CD_Pipelinetest/.circleci/create_infrastructure/*    
 
@@ -57,7 +57,7 @@ jobs:
           fingerprints: ["e8:07:f5:54:f3:a9:b0:65:bf:52:fd:ac:2b:6b:c4:62"]
       
       - attach_workspace:
-          at: /tmp/workspace
+          at: ~/.circleci
       - run:
           name: Install dependencies
           command: |
