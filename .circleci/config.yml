@@ -43,8 +43,8 @@ jobs:
           command: |
             yum install -y tar gzip
 
-      - persist_to_workspace:
-          root: ~/
+      - save_cache:
+          key: v1-my-project-{{ checksum "inventory" }}
           paths:
             - CI-CD_Pipelinetest/inventory    
 
