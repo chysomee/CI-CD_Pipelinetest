@@ -45,8 +45,8 @@ jobs:
 
       - persist_to_workspace:
           root: ~/
-          paths: 
-            - CI-CD_Pipelinetest/.circleci/inventory    
+          paths:
+            - CI-CD_Pipelinetest/inventory    
 
   configure_infrastructure:
     docker:
