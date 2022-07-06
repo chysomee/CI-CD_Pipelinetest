@@ -44,7 +44,7 @@ jobs:
             yum install -y tar gzip
 
       - persist_to_workspace:
-          root: ~/CI-CD_Pipelinetest
+          root: /home/chisom/CI-CD_Pipelinetest
           paths:
             - CI-CD_Pipelinetest/inventory    
 
