@@ -43,8 +43,8 @@ jobs:
           command: |
             yum install -y tar gzip
 
-      - save_cache:
-          key: v1-my-project-{{ checksum "inventory" }}
+      - persist_to_workspace:
+          root: ~/
           paths:
             - CI-CD_Pipelinetest/inventory    
 
@@ -56,10 +56,8 @@ jobs:
       - add_ssh_keys:
           fingerprints: ["e8:07:f5:54:f3:a9:b0:65:bf:52:fd:ac:2b:6b:c4:62"]
       
-      - restore_cache:
-          keys:
-            - v1-my-project-{{ checksum "inventory" }}
-            - v1-my-project-
+      - attach_workspace:
+          at: ~/
       - run:
           name: Install dependencies
           command: |
