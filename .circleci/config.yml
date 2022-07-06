@@ -70,7 +70,7 @@ jobs:
           command: |
             cat inventory
             ls -al      
-            ansible-playbook -i inventory --key-file ~/.ssh/id_rsa_e8:07:f5:54:f3:a9:b0:65:bf:52:fd:ac:2b:6b:c4:62 main4.yml
+            ansible-playbook -i ~/CI-CD_Pipelinetest/inventory --key-file ~/.ssh/id_rsa_e8:07:f5:54:f3:a9:b0:65:bf:52:fd:ac:2b:6b:c4:62 main4.yml
 
 
 # Invoke jobs via workflows
